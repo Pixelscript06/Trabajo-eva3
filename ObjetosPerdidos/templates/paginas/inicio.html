@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %}
+
+<div class="p-5 bg-white rounded shadow-sm">
+    <h2 class="display-5">Oficina de Objetos Perdidos</h2>
+    <p class="lead">Terminal de Buses Cordillera Azul</p>
+    <hr class="my-3">
+    <p>
+        Registramos cada objeto que se encuentra en andenes, salas de espera, baños y buses,
+        con su fotografia, para que los pasajeros puedan reconocerlo y recuperarlo.
+    </p>
+    <a class="btn btn-primary btn-lg" href="{% url 'objetos' %}" role="button">
+        <i class="bi bi-search"></i> Ver objetos encontrados
+    </a>
+    <a class="btn btn-success btn-lg" href="{% url 'crear' %}" role="button">
+        <i class="bi bi-plus-circle"></i> Registrar un objeto
+    </a>
+</div>
+
+{% endblock %}

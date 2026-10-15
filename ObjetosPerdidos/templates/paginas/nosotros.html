@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block titulo %} Nosotros {% endblock %}
+
+{% block contenido %}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h4 class="mb-0">Sobre la Oficina de Objetos Perdidos</h4>
+    </div>
+    <div class="card-body">
+        <p>
+            El Terminal de Buses Cordillera Azul recibe a diario a miles de pasajeros que viajan
+            entre Rancagua, Santiago y el sur del pais. Todos los dias se encuentran mochilas,
+            celulares, documentos, llaves y otras pertenencias olvidadas. La Oficina de Objetos
+            Perdidos guarda estos objetos y ayuda a que vuelvan a manos de sus dueños.
+        </p>
+
+        <h5 class="mt-4">¿Como trabajamos?</h5>
+        <ol>
+            <li>Un funcionario encuentra un objeto y lo lleva a la oficina.</li>
+            <li>El objeto se fotografia y se registra en el sistema con el lugar y la fecha del hallazgo.</li>
+            <li>Queda <strong>en custodia</strong> durante 90 dias.</li>
+            <li>Si el dueño lo reconoce y acredita que es suyo, se le entrega y se registra su correo.</li>
+            <li>Si nadie lo reclama en 90 dias, el objeto se <strong>dona</strong> a una institucion de beneficencia.</li>
+        </ol>
+
+        <h5 class="mt-4">Horario de atencion</h5>
+        <p class="mb-0">Lunes a domingo de 07:00 a 22:00 horas, junto a la boleteria del anden 1.</p>
+    </div>
+</div>
+
+{% endblock %}

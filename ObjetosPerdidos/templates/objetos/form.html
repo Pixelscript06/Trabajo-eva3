@@ -1,0 +1,16 @@
+<form enctype="multipart/form-data" method="post" novalidate>
+    {% csrf_token %}
+
+    <div class="row">
+        {% for campo in formulario %}
+        <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold">{{ campo.label }}</label>
+            {{ campo }}
+            {{ campo.errors }}
+        </div>
+        {% endfor %}
+    </div>
+
+    <input class="btn btn-success" type="submit" value="Guardar">
+    <a class="btn btn-primary" href="{% url 'objetos' %}" role="button">Cancelar</a>
+</form>

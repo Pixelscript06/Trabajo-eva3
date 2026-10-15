@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block titulo %} {{ objeto.nombre }} {% endblock %}
+
+{% block contenido %}
+
+<div class="card shadow-sm">
+    <div class="card-header">
+        <h4 class="mb-0">Ficha del objeto N° {{ objeto.id }}</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <img src="{{ objeto.imagen.url }}" class="img-fluid rounded border" alt="{{ objeto.nombre }}">
+            </div>
+            <div class="col-md-7">
+                <h3>{{ objeto.nombre }}</h3>
+                <p class="text-muted">{{ objeto.descripcion }}</p>
+                <table class="table">
+                    <tr><th>Categoria</th><td>{{ objeto.categoria }}</td></tr>
+                    <tr><th>Lugar donde se encontro</th><td>{{ objeto.lugar_hallazgo }}</td></tr>
+                    <tr><th>Fecha del hallazgo</th><td>{{ objeto.fecha_hallazgo }}</td></tr>
+                    <tr><th>Funcionario que lo encontro</th><td>{{ objeto.encontrado_por }}</td></tr>
+                    <tr><th>Correo del funcionario</th><td>{{ objeto.correo_funcionario }}</td></tr>
+                    <tr><th>Valor estimado</th><td>${{ objeto.valor_estimado }}</td></tr>
+                    <tr><th>Estado</th><td>{{ objeto.estado }}</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a class="btn btn-primary" href="{% url 'objetos' %}">Volver</a>
+        <a class="btn btn-warning" href="{% url 'editar' objeto.id %}">Editar</a>
+        <a class="btn btn-danger" href="{% url 'eliminar' objeto.id %}">Eliminar</a>
+    </div>
+</div>
+
+{% endblock %}

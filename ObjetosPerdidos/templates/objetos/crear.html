@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %} Registrar objeto {% endblock %}
+
+{% block contenido %}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-success text-white">
+        <h4 class="mb-0">Registrar un objeto encontrado</h4>
+    </div>
+    <div class="card-body">
+        {% include 'objetos/form.html' %}
+    </div>
+</div>
+
+{% endblock %}
